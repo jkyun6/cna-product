@@ -1,0 +1,18 @@
+server:
+  port:8081
+
+spring:
+  profile: default
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        input:
+          group: product
+          destination: shop
+          contentType: application/json
+        output:
+          destination: shop
+          contentType: application/json
