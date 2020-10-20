@@ -5,7 +5,8 @@ public class OrderPlaced {
     Long orderId;
     Long productId;
     String orderName;
-    int orderQty;
+    String productName;
+    int Qty;
 
     public OrderPlaced(){
         this.eventType = this.getClass().getSimpleName();
@@ -43,11 +44,19 @@ public class OrderPlaced {
         this.orderName = orderName;
     }
 
-    public int getOrderQty() {
-        return orderQty;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setOrderQty(int orderQty) {
-        this.orderQty = orderQty;
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public int getQty() {
+        return Qty;
+    }
+
+    public void setQty(int qty) {
+        Qty = qty;
     }
 }
